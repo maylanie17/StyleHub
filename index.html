@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Fashion E-commerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">👕</span>
+                <span class="logo-text">StyleHub</span>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-link">Products</a>
+                <a href="#" class="nav-link">Cart</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Product Collection Section -->
+        <section class="product-section">
+            <h1 class="section-title">Our Collection</h1>
+            
+            <!-- Category Filters -->
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="shirts">Shirts</button>
+                <button class="filter-btn" data-category="pants">Pants</button>
+                <button class="filter-btn" data-category="dresses">Dresses</button>
+                <button class="filter-btn" data-category="accessories">Accessories</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be dynamically generated here -->
+            </div>
+        </section>
+
+        <!-- Shopping Cart Section -->
+        <section class="cart-section">
+            <div class="cart-card">
+                <h2 class="cart-title" id="cartTitle">Shopping Cart (0 items)</h2>
+                <div class="cart-content" id="cartContent">
+                    <div class="empty-cart">
+                        <p>Your cart is empty</p>
+                    </div>
+                </div>
+                <div class="cart-summary" id="cartSummary" style="display: none;">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Discount:</span>
+                        <span id="discount">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Gift Wrap:</span>
+                        <span id="giftWrap">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Warranty:</span>
+                        <span id="warranty">$0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="total">$0.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Product Modal for Decorator Options -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div class="product-details">
+                    <img id="modalProductImage" src="" alt="">
+                    <div class="product-info">
+                        <h3 id="modalProductName"></h3>
+                        <p id="modalProductCategory"></p>
+                        <p id="modalProductPrice"></p>
+                    </div>
+                </div>
+                <div class="decorator-options">
+                    <h4>Add Features:</h4>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="giftWrapOption">
+                        <span>Gift Wrap (+$5.00)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="discountOption">
+                        <span>10% Discount</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="warrantyOption">
+                        <span>Extended Warranty (+$10.00)</span>
+                    </label>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" id="addToCartBtn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
